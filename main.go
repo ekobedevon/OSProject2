@@ -1,6 +1,7 @@
 package main
 
 import (
+	"OSProject2/builtins"
 	"bufio"
 	"fmt"
 	"io"
@@ -8,8 +9,6 @@ import (
 	"os/exec"
 	"os/user"
 	"strings"
-
-	"github.com/jh125486/CSCE4600/Project2/builtins"
 )
 
 func main() {
@@ -78,6 +77,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.ChangeDirectory(args...)
 	case "env":
 		return builtins.EnvironmentVariables(w, args...)
+	case "pwd":
+		return builtins.PrintWorkingDirectory(args...)
 	case "exit":
 		exit <- struct{}{}
 		return nil
