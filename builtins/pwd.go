@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	ErrsInvalidArgCount = errors.New("invalid argument count")
+	ErrsInvalidArgCount = errors.New("invalid arguments")
 )
 
 func PrintWorkingDirectory(args ...string) error {
@@ -18,6 +18,6 @@ func PrintWorkingDirectory(args ...string) error {
 		fmt.Println(CWD)
 		return err
 	default:
-		return fmt.Errorf("%w: expected zero or one arguments (directory)", ErrInvalidArgCount)
+		return fmt.Errorf("%w: unexpected arguments", ErrInvalidArgCount)
 	}
 }
