@@ -58,4 +58,3 @@ func Test_runLoop(t *testing.T) {
 		})
 	}
 }
-
