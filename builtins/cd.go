@@ -11,6 +11,7 @@ var (
 	HomeDir, _         = os.UserHomeDir()
 )
 
+
 func ChangeDirectory(args ...string) error {
 	switch len(args) {
 	case 0: // change to home directory if available
