@@ -88,6 +88,7 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	return executeCommand(name, args...)
 }
 
+
 func executeCommand(name string, arg ...string) error {
 	// Otherwise prep the command
 	cmd := exec.Command(name, arg...)
