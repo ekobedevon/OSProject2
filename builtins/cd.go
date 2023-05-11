@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 )
-
 var (
 	ErrInvalidArgCount = errors.New("invalid argument count")
 	HomeDir, _         = os.UserHomeDir()
