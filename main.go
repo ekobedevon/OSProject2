@@ -82,12 +82,15 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "echo":
 		return builtins.Echo(args...)
 	case "ls":
-		return builtins.ListDirectory(args ...)	
+		return builtins.ListDirectory(args...)
+	case "wait":
+		return builtins.BuiltinWait(args...)
 	case "exit":
 		return builtins.ExitCommand(args...)
+
 	case "exit1":
 		exit <- struct{}{}
-		return nil	
+		return nil
 	}
 	return executeCommand(name, args...)
 }

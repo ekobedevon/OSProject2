@@ -53,3 +53,4 @@ The following commands were implemented into the shell
 - `exit`
 - `ls`
 - `pwd`
+- `wait`
