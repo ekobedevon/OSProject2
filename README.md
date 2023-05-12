@@ -44,4 +44,12 @@ A GitHub link to your project which includes:
 - `README.md` <- describes anything needed to build (optional)
 - `main.go` <- your shell
 - `builtins package` <- each command should have it's own file (for readability)
-# OSProject2
+
+## Implemented Commands
+
+The following commands were implemented into the shell
+
+- `echo`
+- `exit`
+- `ls`
+- `pwd`
